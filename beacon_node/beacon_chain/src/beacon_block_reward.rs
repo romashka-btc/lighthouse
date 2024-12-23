@@ -201,7 +201,7 @@ impl<T: BeaconChainTypes> BeaconChain<T> {
                     }
                 };
 
-                // If the next epoch end is no longer phase0, no proposer rewards are awarded, as Altair epoch boundry
+                // If the next epoch end is no longer phase0, no proposer rewards are awarded, as Altair epoch boundary
                 // processing kicks in. We check this here, as we know that current_epoch_end will always be phase0.
                 if !matches!(next_epoch_end, BeaconState::Base(_)) {
                     continue;
